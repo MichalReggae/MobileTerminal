@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My_HW2_v1</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="zoom_in">Zoom in</string>
+    <string name="zoom_out">Zoom out</string>
+    <string name="btn_clear">CLEAR MEMORY</string>
+    <string name="x_test_y_test">x: test y: test</string>
+</resources>

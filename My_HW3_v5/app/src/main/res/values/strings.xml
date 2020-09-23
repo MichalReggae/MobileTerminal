@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My_HW3_v5</string>
+    <string name="list">list</string>
+    <string name="add">add</string>
+    <string name="additional">additional</string>
+    <string name="name">name</string>
+    <string name="count">count</string>
+    <string name="update">Update</string>
+    <string name="item_name">Item name</string>
+    <string name="item_count">Item count</string>
+</resources>

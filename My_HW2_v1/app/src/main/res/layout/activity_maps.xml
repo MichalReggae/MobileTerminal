@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <ImageButton
+        android:id="@+id/imageButtonZoomIn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/round_button"
+        android:contentDescription="@string/zoom_in"
+        android:onClick="onZoom"
+        android:src="@mipmap/ic_zoom_in_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonZoomOut"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:contentDescription="@string/zoom_out"
+        android:src="@mipmap/ic_zoom_out_foreground"
+        android:onClick="onZoom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonZoomIn"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonZoomIn" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_clear"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonZoomOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonZoomIn"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <LinearLayout
+        android:id="@+id/ani_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/button_clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_clear"
+        app:layout_constraintTop_toTopOf="@+id/button_clear">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:borderWidth="0dp"
+            android:src="@drawable/ic_record"
+            app:backgroundTint="@color/fab_color"
+            app:fabCustomSize="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_clear"
+            app:layout_constraintEnd_toEndOf="@+id/map"
+            app:layout_constraintTop_toTopOf="@+id/button_clear"
+            android:layout_marginRight="10dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:borderWidth="0dp"
+            android:src="@android:drawable/ic_delete"
+            app:backgroundTint="@color/fab_color"
+            app:fabCustomSize="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/floatingActionButtonStart" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
